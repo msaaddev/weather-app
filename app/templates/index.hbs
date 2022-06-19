@@ -5,7 +5,7 @@
       {{#if this.isLoading}}
         <Loader />
       {{else}}
-        <div>
+        <div class='home-weather-wrapper'>
           <div class='home-weather-area-name'>
             <h2>{{@model.name}}</h2>
           </div>
@@ -17,6 +17,9 @@
               <p>Wind: {{@model.wind.speed}} m/s</p>
             </div>
           </div>
+          <LinkTo @route="search">
+            <button type='button' class='btn'>More weather</button>
+          </LinkTo>
         </div>
         <div class='home-weather-desc'>
           <p>{{@model.weather.0.description}}</p>

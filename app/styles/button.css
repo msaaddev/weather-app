@@ -1,0 +1,23 @@
+.btn {
+  margin: 20px 0 0 5px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  width: 100px;
+  padding: 11px 0;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 3px;
+  background: radial-gradient(
+    ellipse at right top,
+    rgba(5, 13, 33, 0.9) 0%,
+    rgba(5, 13, 33, 1) 100%
+  );
+  box-shadow: 0 5px 10px rgba(5, 13, 33, 1);
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  box-shadow: 0 0px 10px rgba(5, 13, 33, 1);
+}
