@@ -1,0 +1,31 @@
+<div class='weather-container'>
+  <div class='weather-subcontainer-1'></div>
+  <div class='weather-subcontainer-2'>
+    <div class='weather-weather-container'>
+      {{#if this.isLoading}}
+        <Loader />
+      {{else}}
+        <div class='weather-weather-wrapper'>
+          <div class='weather-weather-area-name'>
+            <h2>{{@weather.name}}</h2>
+          </div>
+          <div class='weather-weather-area'>
+            <p class='weather-area-temp'>{{@weather.main.temp}}° <span>C</span></p>
+            <div class='weather-area-weather-details'>
+              <p>Pressure: {{@weather.main.pressure}} hPa</p>
+              <p>Humidity: {{@weather.main.humidity}}%</p>
+              <p>Wind: {{@weather.wind.speed}} m/s</p>
+            </div>
+          </div>
+          <LinkTo @route="search">
+            <button type='button' class='btn'>More weather</button>
+          </LinkTo>
+        </div>
+        <div class='weather-weather-desc'>
+          <p>{{@weather.weather.0.description}}</p>
+          <p>{{@weather.sys.country}}</p>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</div>

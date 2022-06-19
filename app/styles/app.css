@@ -3,7 +3,7 @@
 
 /* external stylesheets */
 @import './header.css';
-@import './homepage.css';
+@import './weather.css';
 @import './loader.css';
 @import './button.css';
 @import './search.css';
