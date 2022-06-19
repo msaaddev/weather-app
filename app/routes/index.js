@@ -1,9 +1,12 @@
 import Route from '@ember/routing/route';
 import ENV from 'weather-app/config/environment';
+import { tracked } from '@glimmer/tracking';
 
 const api = `https://api.openweathermap.org/data/2.5/weather`;
 
 export default class IndexRoute extends Route {
+  @tracked isLoading = true;
+
   getCurrentLocation = () => {
     return new Promise((resolve, reject) => {
       navigator.geolocation.getCurrentPosition(
@@ -41,6 +44,7 @@ export default class IndexRoute extends Route {
       main = { ...main, temp };
       res = { ...res, main, weather };
 
+      this.isLoading = false;
       return res;
     } catch (err) {
       console.log(err);
