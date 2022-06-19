@@ -26,7 +26,7 @@ export default class IndexRoute extends Route {
     try {
       const { latitude, longitude } = await this.getCurrentLocation();
       const response = await fetch(
-        `${api}?lat=${latitude}&lon=${longitude}&appid=${ENV.APP.OPEN_WEATHER_MAP_API_KEY}&units=metric`
+        `${api}?lat=${latitude}&lon=${longitude}&appid=${ENV.OPEN_WEATHER_MAP_API_KEY}&units=metric`
       );
       let res = await response.json();
 
