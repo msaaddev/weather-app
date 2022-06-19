@@ -35,14 +35,9 @@ export default class IndexRoute extends Route {
 
       // manipulate the response to make it more usable
       let main = { ...res.main };
-      let weather = { ...res.weather[0] };
-      let description = weather.description;
-      description = description.charAt(0).toUpperCase() + description.slice(1);
-      weather = { ...weather, description };
-      weather = [weather];
       const temp = Math.floor(main.temp);
       main = { ...main, temp };
-      res = { ...res, main, weather };
+      res = { ...res, main };
 
       this.isLoading = false;
       return res;

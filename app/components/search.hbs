@@ -1,0 +1,10 @@
+{{page-title 'Search weather'}}
+<div class='search-container'>
+  <form class='search-subcontainer'>
+    <h2>City name</h2>
+    <div class="search-control-wrapper">
+      <Input placeholder='Enter a city...' @value={{this.city}} />
+      <button type='submit' {{on 'click' this.updateCity}}>Search</button>
+    </div>
+  </form>
+</div>
