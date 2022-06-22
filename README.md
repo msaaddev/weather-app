@@ -1,7 +1,10 @@
-# weather-app
+<h1 align="center">  Weather App   </h1>  
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+The weather-app is a simple weather forecast app, which uses OpenWeatherMap API to fetch forecast data. The end use can basically enter the location and the app will return the weather information. With user friendly and sleak UI, this app is very easy to use.  
+
+![Screenshot 2022-06-22 222218](https://user-images.githubusercontent.com/53275443/175094129-4270969e-02ae-475a-9fc0-46e1e292b585.jpg)
+
 
 ## Prerequisites
 
